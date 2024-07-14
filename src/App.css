@@ -1,10 +1,9 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -245,7 +244,8 @@ p {
 .heroSection {
   display: flex;
   flex-direction: column;
-  padding: 75px 0 50px 0;
+  padding: px 0 5px 0;
+  font-family: 'Arial', sans-serif; /* Updated font family */
 }
 .heroSection .container,
 .heroSection .details {
@@ -255,8 +255,8 @@ p {
 }
 .heroSection .container {
   display: flex;
-  height: 450px;
-  margin-bottom: 1.75rem;
+  height: 400px;
+ 
 }
 .heroSection .container .title,
 .heroSection .container .image {
@@ -269,10 +269,15 @@ p {
 }
 .heroSection .container .title h1 {
   max-width: 600px;
+  color:blue; /* Updated text color */
+  font-size: 2.5rem; /* Updated font size */
 }
 .heroSection .container .title p {
   margin-top: 1.5rem;
   max-width: 600px;
+  color:#0b4a36; /* Updated text color */
+  font-size: 1rem; /* Updated font size */
+  line-height: 1.5; /* Updated line height */
 }
 .heroSection .container .image {
   overflow: hidden;
@@ -284,38 +289,46 @@ p {
 .heroSection .details {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  margin-bottom: 20px;
 }
 .heroSection .details .card {
   display: flex;
-  gap: 20px;
+  gap: 17px;
   align-items: center;
   background: #f1f3f6;
-  width: 220px;
+  width: 200px;
   padding: 10px 20px;
+  border-radius: 10px; /* Added border radius */
+  transition: transform 0.3s; /* Added transition */
+}
+.heroSection .details .card:hover {
+  transform: scale(1.05); /* Added scale effect on hover */
 }
 .heroSection .details .card .icon {
-  font-size: 24px;
+  font-size: 26px;
   background: rgb(233, 249, 255);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   color: #2d5649;
+  border-radius: 50%; /* Added border radius */
 }
 .heroSection .details .card .content p:first-child {
   font-weight: bold;
+  color: #2c3e50; /* Updated text color */
+  font-size: 1.2rem; /* Updated font size */
 }
 .heroSection .details .card .content p:nth-child(2) {
-  font-size: 14px;
-  color: gray;
+  font-size: 0.875rem;
+  color:green;
   margin-top: 5px;
 }
 .heroSection .details .card:hover {
   transition: all 0.3s;
   -webkit-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-   box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
 }
 @media (max-width: 1520px) {
   .heroSection .container,
@@ -370,9 +383,12 @@ p {
     max-width: 100%;
   }
 }
+
 .howitworks {
-  background: #f1f3f6;
+  background: rgba(241, 243, 246, 1); /* Light gray background */
 }
+
+
 .howitworks .container {
   max-width: 1500px;
   min-width: 1500px;
@@ -383,13 +399,15 @@ p {
   padding: 50px 0;
   gap: 50px;
 }
+
 .howitworks .container .banner {
   display: flex;
   justify-content: space-between;
   gap: 25px;
 }
+
 .howitworks .container .banner .card {
-  background: #fff;
+  background: #ffffff;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -397,27 +415,46 @@ p {
   flex: 1;
   height: 350px;
   padding: 30px 50px;
+  margin-bottom: 25px;
   gap: 12px;
   justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 8px; /* Added border radius for rounded corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
-.howitworks .container .banner .card:nth-child(2) {
+
+.howitworks .container .banner .card:hover {
+  transform: scale(1.04); /* Slight zoom effect on hover */
+}
+
+/* .howitworks .container .banner .card:nth-child(2) {
   background: #18191c;
-  color: #fff;
-}
+  color: #ffffff;
+} */
+
 .howitworks .container .banner .card svg {
   font-size: 30px;
   color: #2d5649;
 }
+
+.howitworks .container .banner .card p:first-child {
+  font-weight: bold;
+  color: #06213d; /* Updated text color for titles */
+  font-size: 1.125rem; /* Updated font size for titles */
+}
+
 .howitworks .container .banner .card p:last-child {
   font-size: 14px;
-  color: gray;
+  color: #7f8c8d; /* Updated text color for descriptions */
 }
+
 @media (max-width: 1520px) {
   .howitworks .container {
     min-width: 100%;
     padding: 50px 20px;
   }
 }
+
 @media (max-width: 850px) {
   .howitworks .container .banner {
     flex-wrap: wrap;
@@ -429,6 +466,7 @@ p {
     height: 320px;
   }
 }
+
 @media (max-width: 480px) {
   .howitworks .container .banner .card {
     width: 100%;
@@ -436,78 +474,98 @@ p {
 }
 
 .categories {
-  min-width: 1500px;
-  max-width: 1500px;
+  background: #f9fafb; /* Light gray background */
+  min-width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 50px 0;
   gap: 35px;
+  margin-bottom: 20px;
 }
+
+.categories h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Dark gray color for heading */
+}
+
 .categories .banner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 35px;
-  padding: 20px 0;
+  gap: 20px; /* Adjusted gap between cards */
 }
+
 .categories .banner .card {
-  width: 320px;
-  background: red;
+  background: #ffffff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card */
+  width: 100%;
+  max-width: 320px; /* Max width of each card */
   padding: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #f1f3f6;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
+
 .categories .banner .card:hover {
-  transition: all 0.3s;
-  -webkit-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-   box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
+
 .categories .banner .card .icon {
   font-size: 24px;
-  padding: 10px;
-  background: rgb(233, 249, 255);
-  color: #2d5649;
+  padding: 12px;
+  background: rgba(233, 249, 255, 0.8); /* Light blue background with opacity */
+  border-radius: 50%; /* Rounded icon container */
+  color: #2d5649; /* Dark green color for icon */
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .categories .banner .card .text p:nth-child(1) {
   font-size: 16px;
   font-weight: bold;
+  color: #333; /* Dark gray color for title */
 }
+
 .categories .banner .card .text p:nth-child(2) {
   font-size: 14px;
   font-weight: 300;
-  color: gray;
+  color: rgba(127, 140, 141, 0.9); /* Light gray color for subtitle */
 }
+
 @media (max-width: 1520px) {
   .categories {
-    min-width: 100%;
     padding: 50px 20px;
   }
 }
+
 @media (max-width: 714px) {
-  .categories {
-    align-items: center;
-  }
   .categories .banner {
     justify-content: center;
+    gap: 15px; /* Reduced gap between cards */
   }
 }
+
 @media (max-width: 350px) {
   .categories .banner .card {
     width: 100%;
+    max-width: none; /* Allow card to take full width */
   }
 }
+
 
 .companies {
   background: #f1f3f6;
   padding: 50px 0;
 }
+
 .companies .container {
   min-width: 1500px;
   max-width: 1500px;
@@ -517,12 +575,22 @@ p {
   align-items: center;
   gap: 35px;
 }
+
+.companies .container h3 {
+  font-size: 28px;
+  color: #2d5649;
+  font-weight: bold;
+}
+
 .companies .container .banner {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Gap between cards */
   width: 100%;
   padding: 20px 0;
 }
+
 .companies .container .banner .card {
   width: 340px;
   display: flex;
@@ -530,50 +598,69 @@ p {
   background: #fff;
   padding: 20px;
   gap: 15px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
 }
+
 .companies .container .banner .card:hover {
-  transition: all 0.3s;
-  -webkit-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-   box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
 }
+
 .companies .container .banner .card .content {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 .companies .container .banner .card .content .icon {
-  padding: 10px;
-  font-size: 24px;
-  color: #2d5649;
-  background: rgb(233, 249, 255);
+  padding: 15px;
+  font-size: 28px;
+  color: #ffffff;
+  background: #2d5649;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .companies .container .banner .card .content .text p:first-child {
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
 }
+
 .companies .container .banner .card .content .text p:last-child {
   font-size: 15px;
-  color: gray;
+  color: #666;
 }
+
 .companies .container .banner .card button {
-  color: #2d5649;
-  background: rgb(233, 249, 255);
+  color: #fff;
+  background: #2d5649;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
-  padding: 7px 0;
+  padding: 10px;
   margin-top: 10px;
+  border-radius: 5px; /* Rounded button corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.companies .container .banner .card button:hover {
+  background: #1f3c28; /* Darker shade on hover */
+}
+
 @media (max-width: 1520px) {
   .companies .container {
     min-width: 100%;
     padding: 0 20px;
   }
 }
+
 @media (max-width: 1100px) {
   .companies .container .banner {
     flex-direction: column;
@@ -581,12 +668,15 @@ p {
     align-items: center;
   }
   .companies .container .banner .card {
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
   }
 }
+
 @media (max-width: 470px) {
   .companies .container .banner .card {
     width: 100%;
+    max-width: 100%;
   }
 }
 .jobs {
@@ -594,15 +684,17 @@ p {
   min-height: 100vh;
   padding: 50px 20px;
 }
+
 .jobs .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 1500px;
+  min-width: 1000px; /* Adjusted to accommodate various screen sizes */
   max-width: 1500px;
   margin: 0 auto;
   gap: 35px;
 }
+
 .jobs .container .banner {
   display: flex;
   flex-wrap: wrap;
@@ -611,106 +703,191 @@ p {
   justify-content: center;
   padding: 30px 0;
 }
+
 .jobs .container .banner .card {
   background: #fff;
   text-decoration: none;
   width: 320px;
-  height: 220px;
-  padding: 20px 20px;
+  height: auto; /* Adjusted to accommodate content height dynamically */
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
+
 .jobs .container .banner .card:hover {
-  transition: all 0.3s;
-  -webkit-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
-  box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  background: #e6f7ff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
+
+.jobs .container .banner .card:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.jobs .container .banner .card:nth-child(even) {
+  background: #e0f7fa;
+}
+
 .jobs .container .banner .card p:first-child {
   font-weight: bold;
   font-size: 1.6rem;
+  color: #2d5649; /* Dark green color for job title */
 }
+
 .jobs .container .banner .card p:nth-child(2) {
   font-size: 1.3rem;
-  color: gray;
+  color: #4a90e2; /* Blue color for job category */
 }
+
 .jobs .container .banner .card p:last-child {
   font-size: 1rem;
-  color: gray;
+  color: #777; /* Grey color for job location */
 }
+
 .jobs .container .banner .card a {
   text-decoration: none;
-  padding: 7px;
-  font-size: 20px;
-  color: #2d5649;
-  background: rgb(233, 249, 255);
-  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #fff; /* White text color for the button */
+  background: #2d5649; /* Dark green background for the button */
+  border-radius: 4px;
   display: block;
   text-align: center;
+  transition: background 0.3s, color 0.3s;
 }
+
+.jobs .container .banner .card a:hover {
+  background: #1a3a2f; /* Darker green background on hover */
+  color: #e0f7fa; /* Light cyan text color on hover */
+}
+
 @media (max-width: 1520px) {
   .jobs .container {
     min-width: 100%;
   }
 }
+
 @media (max-width: 1060px) {
   .jobs .container .banner .card {
     width: 360px;
   }
 }
+
 @media (max-width: 795px) {
   .jobs .container .banner .card {
     width: 100%;
   }
 }
 
+
 .jobDetail {
   background: #f1f3f6;
-  padding: 50px 20px;
+  padding: 15px 15px; /* Reduced padding */
+  font-family: 'Arial', sans-serif;
 }
+
 .jobDetail .container {
-  max-width: 1500px;
-  min-width: 1500px;
+  max-width: 1000px; /* Adjusted for better responsiveness */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 15px; /* Reduced padding */
 }
+
 .jobDetail .container .banner {
   width: 100%;
-  min-height: 767px;
-  padding: 50px 0;
+  padding: 20px 15px; /* Reduced padding */
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  justify-content: center;
+  gap: 10px; /* Reduced gap */
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.jobDetail .container .banner p {
-  font-weight: bold;
+
+.jobDetail .container h3 {
   color: #2d5649;
+  font-size: 2rem;
+  margin-bottom: 15px; /* Reduced margin */
 }
+
+.jobDetail .container .banner p {
+  margin: 5px 0; /* Reduced margin */
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2d5649; /* Grey color for text */
+}
+
 .jobDetail .container .banner p span {
-  color: #18191c;
-  font-weight: 400;
+  font-weight:500;
+  margin-left: 2px;
+  color: #7a7a7a; /* Green color for span text */
 }
+
+.jobDetail .container .banner p.title span {
+  color: #4a90e2; /* Blue color for title */
+}
+
+.jobDetail .container .banner p.category span {
+  color: #7ed321; /* Green color for category */
+}
+
+.jobDetail .container .banner p.company span {
+  color: #bd10e0; /* Purple color for company */
+}
+
+.jobDetail .container .banner p.city span,
+.jobDetail .container .banner p.location span,
+.jobDetail .container .banner p.description span,
+.jobDetail .container .banner p.salary span {
+  color: #f5a623; /* Orange color for other details */
+}
+
 .jobDetail .container .banner a {
   background-color: #2d5649;
-  color: rgb(233, 249, 255);
-  font-size: 20px;
+  color: #e9f9ff;
+  font-size: 1.2rem;
   font-weight: 400;
   border: none;
-  padding: 12px 30px;
+  padding: 8px 15px; /* Reduced padding */
   text-decoration: none;
   margin-top: 10px;
-  width: auto;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  text-align: center;
 }
+
+.jobDetail .container .banner a:hover {
+  background-color: #1a3a2f;
+  color: #e0f7fa;
+}
+
 @media (max-width: 1520px) {
   .jobDetail .container {
-    min-width: 100%;
+    padding: 0 10px; /* Reduced padding */
   }
 }
+
+@media (max-width: 1060px) {
+  .jobDetail .container .banner {
+    padding: 15px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 795px) {
+  .jobDetail .container {
+    padding: 15px; /* Reduced padding */
+  }
+}
+
 .application {
   display: flex;
   flex-direction: column;
