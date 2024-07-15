@@ -63,13 +63,13 @@ const Navbar = () => {
             <Link to='/application/my' className='hover:text-[#007bff] text-gray-500 font-semibold text-[15px]'>
              
               {user && user.role === "Employer" ? (<>
-                   <Link to='/job/post' onClick={() => setIsMenuOpen(false)}
+                   <Link to='/application/my' onClick={() => setIsMenuOpen(false)}
               class="text-black hover:text-blue-600 text-sm flex items-center hover:bg-blue-50 rounded px-4 py-3 transition-all">
                <FaPersonRays className='text-gray-500 mr-1' />
               <span className='text-gray-500 font-bold'>Applicant's Applications</span>
              </Link>
               </>) : (<>
-                   <Link to='/job/post' onClick={() => setIsMenuOpen(false)}
+                   <Link to='/application/my' onClick={() => setIsMenuOpen(false)}
                 class="text-gray-500 hover:text-blue-600 text-sm flex items-center hover:bg-blue-50 rounded px-4 py-3 transition-all">
                 <FaUserCheck className='text-gray-500 mr-1' />
                 <span className='text-gray-500 font-bold'>My Applications</span>
