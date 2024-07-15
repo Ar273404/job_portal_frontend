@@ -1049,8 +1049,151 @@ p {
     width: 100%;
   }
 }
-
 .job_post {
+  background: #e6ecf3;
+  padding: 40px 20px;
+  min-height: 870px;
+  display: flex;
+  align-items: center;
+}
+
+.job_post .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job_post .container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.job_post .container form .wrapper {
+  display: flex;
+  gap: 5vw;
+}
+
+.job_post .container form .input-group {
+  position: relative;
+  flex: 1;
+}
+
+.job_post .container form .input-group input,
+.job_post .container form .input-group select,
+.job_post .container form .input-group textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f5f7fa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.job_post .container form .input-group input:focus,
+.job_post .container form .input-group select:focus,
+.job_post .container form .input-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.job_post .container form .input-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #213343;
+}
+
+.job_post .container form .salary_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job_post .container form .salary_wrapper p {
+  color: #d9534f;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.job_post .container form .salary_wrapper select {
+  font-size: 18px;
+  padding: 10px;
+  background: #f5f7fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.job_post .container form .salary_wrapper select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.job_post .container form .salary_wrapper .ranged_salary {
+  display: flex;
+  gap: 5vw;
+}
+
+.job_post .container form button {
+  width: 100%;
+  background: #4a90e2;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.job_post .container form button:hover {
+  background: #357abd;
+  box-shadow: 0 4px 8px rgba(53, 122, 189, 0.3);
+}
+
+@media (max-width: 1520px) {
+  .job_post .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .job_post .container {
+    min-width: 100%;
+  }
+
+  .job_post .container form .wrapper,
+  .job_post .container form .salary_wrapper,
+  .job_post .container form .salary_wrapper .ranged_salary {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .job_post .container form .salary_wrapper select {
+    width: 100%;
+  }
+}
+
+
+/* .job_post {
   background: #f1f3f6;
   padding: 50px 20px;
   min-height: 870px;
@@ -1152,7 +1295,7 @@ p {
   .job_post .container form .salary_wrapper select {
     width: 100%;
   }
-}
+} */
 .myJobs {
   background: #f1f3f6;
   padding: 50px 20px;
