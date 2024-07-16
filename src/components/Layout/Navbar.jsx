@@ -20,7 +20,7 @@ import { API_URL } from '../../config';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isAuthorized, setAuthorized, user } = useContext(Context);
+  const { isAuthorized,setAuthorized, user } = useContext(Context);
   const navigateTo = useNavigate();
 
   const handleToggleMenu = () => {

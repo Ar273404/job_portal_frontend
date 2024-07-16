@@ -37,17 +37,23 @@ const MyApplications = () => {
     navigateTo("/");
   }
 
-  const deleteApplication = async (id) => {
+const deleteApplication = (id) => {
     try {
-      const res = await axios.delete(`${API_URL}/delete/${id}`, {
-        withCredentials: true,
-      });
-      toast.success(res.data.message);
-      setApplications(prev => prev.filter(app => app._id !== id));
+      axios
+        .delete(`http://localhost:4000/application/delete/${id}`, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          toast.success(res.data.message);
+          setApplications((prevApplication) =>
+            prevApplication.filter((application) => application._id !== id)
+          );
+        });
     } catch (error) {
-      toast.error(error.response?.data?.message || "An error occurred");
+      toast.error(error.response.data.message);
     }
   };
+
 
   const openModal = (imageUrl) => {
     setResumeImageUrl(imageUrl);
