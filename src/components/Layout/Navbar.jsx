@@ -16,6 +16,7 @@ import { MdBrowserUpdated } from "react-icons/md";
 import { ImProfile } from "react-icons/im";
 import { IoClose } from "react-icons/io5";
 import { BsFillPostcardHeartFill } from "react-icons/bs";
+import { API_URL } from '../../config';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/user/logout", { withCredentials: true });
+      const response = await axios.get(`${API_URL}/user/logout`, { withCredentials: true });
       toast.success(response.data.message);
       setAuthorized(false);
       navigateTo("/login");

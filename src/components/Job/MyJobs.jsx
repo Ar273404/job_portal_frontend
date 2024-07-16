@@ -5,6 +5,7 @@ import { FaCheck } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { Context } from "../../main";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../config";
 
 const MyJobs = () => {
   const [myJobs, setMyJobs] = useState([]);
@@ -17,7 +18,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/job/getmyjobs",
+          `${API_URL}/job/getmyjobs`,
           { withCredentials: true }
         );
         console.log(data.myjobs);
@@ -48,7 +49,7 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`http://localhost:4000/job/updatejobs/${jobId}`, updatedJob, {
+      .put(`${API_URL}/job/updatejobs/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -63,7 +64,7 @@ const MyJobs = () => {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`http://localhost:4000/job/deletejob/${jobId}`, {
+      .delete(`${API_URL}/job/deletejob/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {

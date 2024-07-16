@@ -427,10 +427,7 @@ p {
   transform: scale(1.04); /* Slight zoom effect on hover */
 }
 
-/* .howitworks .container .banner .card:nth-child(2) {
-  background: #18191c;
-  color: #ffffff;
-} */
+
 
 .howitworks .container .banner .card svg {
   font-size: 30px;
@@ -1435,25 +1432,6 @@ p {
     justify-content: center;
   }
 }
-/* @media (max-width: 350px) {
-  .myJobs .container .banner .card {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .myJobs .container .banner .card .content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .myJobs .container .banner .card .content .short_fields,
-  .myJobs .container .banner .card .content .long_field,
-  .myJobs .container .banner .card .content .salary_range {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .myJobs .container .banner .card .button_wrapper {
-    gap: 10px;
-  }
-} */
 
 
 nav {

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import ResumeModel from "./ResumeModel";
 import { FaTrashAlt, FaEye } from "react-icons/fa"; // Import icons from react-icons
+import { API_URL } from "../../config";
 
 const MyApplications = () => {
   const { user } = useContext(Context);
@@ -19,8 +20,8 @@ const MyApplications = () => {
     const fetchApplications = async () => {
       try {
         const endpoint = user && user.role === "Employer" 
-          ? "http://localhost:4000/application/employer/getall" 
-          : "http://localhost:4000/application/jobseeker/getall";
+          ? `${API_URL}/application/employer/getall` 
+          : `${API_URL}/application/jobseeker/getall`;
         
         const res = await axios.get(endpoint, { withCredentials: true });
         setApplications(res.data.applications);
@@ -38,7 +39,7 @@ const MyApplications = () => {
 
   const deleteApplication = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4000/application/delete/${id}`, {
+      const res = await axios.delete(`${API_URL}/delete/${id}`, {
         withCredentials: true,
       });
       toast.success(res.data.message);

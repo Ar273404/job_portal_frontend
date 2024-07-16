@@ -16,6 +16,7 @@ import NotFound from './components/NotFound/NotFound';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { API_URL } from './config';
 
 const App = () => {
   const { isAuthorized, setAuthorized, setUser } = useContext(Context);
@@ -23,7 +24,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/user/getUser", { withCredentials: true });
+        const response = await axios.get(`${API_URL}/user/getUser`, { withCredentials: true });
         setUser(response.data.user);
         setAuthorized(true);
       } catch (error) {

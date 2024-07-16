@@ -12,17 +12,17 @@ const HowItWorks = () => {
         <div className='card'>
           <FaUserPlus/>
           <p>Create Account</p>
-          <p>Rem temporibus adipisci doloribus soluta dolorem, quibusdam omnis culpa veritatis consequuntur magnam, laudantium tenetur, dicta repellat delectus itaque quo id. Soluta, assumenda!</p>
+          <p>Create an account to unlock the full potential of our job platform. By registering, you'll gain access to exclusive job listings, personalized job alerts, and advanced career resources. Simply provide your name, email address, and create a password. </p>
         </div>
          <div className='card'>
           <MdFindInPage/>
-          <p>Find Job / Post Job</p>
-          <p>Rem temporibus adipisci doloribus soluta dolorem, quibusdam omnis culpa veritatis consequuntur magnam, laudantium tenetur, dicta repellat delectus itaque quo id. Soluta, assumenda!</p>
+       <p>Find Job / Post Job</p>
+       <p>Discover exciting job opportunities tailored to your skills and preferences, or post job listings to find the perfect candidates for your company. Join our platform today and take the next step in your career or recruitment journey!</p>
         </div>
          <div className='card'>
           <IoMdSend/>
-          <p>Send The Details</p>
-          <p>Rem temporibus adipisci doloribus soluta dolorem, quibusdam omnis culpa veritatis consequuntur magnam, laudantium tenetur, dicta repellat delectus itaque quo id. Soluta, assumenda!</p>
+         <p>Send The Details</p>
+         <p>Please provide all the necessary details to help us assist you better. Your information is crucial for us to offer tailored solutions and support. Send the details today and let us take care of the rest!</p>
         </div>
       </div>
      </div>

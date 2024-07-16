@@ -2,6 +2,7 @@ import React, { useEffect,useState,useContext } from 'react'
 import {Context} from '../../main';
 import axios from 'axios';
 import { useNavigate,Link } from 'react-router-dom';
+import { API_URL } from '../../config';
 
 const Jobs = () => {
   const [jobs,setJobs] = useState([]);
@@ -9,7 +10,7 @@ const Jobs = () => {
   const navigateTo = useNavigate();
 useEffect(()=>{
   try{
-        axios.get("http://localhost:4000/job/getall",{withCredentials:true}).then((res)=>{
+        axios.get(`${API_URL}/job/getall`,{withCredentials:true}).then((res)=>{
         setJobs(res.data);
        });
   }catch(error)

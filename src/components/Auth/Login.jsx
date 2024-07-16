@@ -4,7 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Context } from '../../main';
-
+import { API_URL } from '../../config';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:4000/user/login", { email, role, password }, {
+      const { data } = await axios.post(`${API_URL}/user/login`, { email, role, password }, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

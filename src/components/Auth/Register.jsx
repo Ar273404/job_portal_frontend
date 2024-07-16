@@ -20,7 +20,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:4000/user/register", { name, email, phone, role, password }, {
+      const { data } = await axios.post(`${API_URL}/user/register`, { name, email, phone, role, password }, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

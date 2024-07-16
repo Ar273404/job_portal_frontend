@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFileAlt } from 'react-icons/fa';
-
+import { API_URL } from '../../config';
 const Application = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -36,7 +36,7 @@ const Application = () => {
     formData.append('jobId', id);
 
     try {
-      const { data } = await axios.post('http://localhost:4000/application/post', formData, {
+      const { data } = await axios.post(`${API_URL}/application/post`, formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',
