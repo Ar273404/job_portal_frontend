@@ -8,6 +8,7 @@ import { MdOutlineMailOutline } from 'react-icons/md';
 import { RiLock2Fill } from 'react-icons/ri';
 import toast from 'react-hot-toast';
 import { API_URL } from '../../config';
+import apiClient from '../../apiclient';
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`${API_URL}/user/register`, { name, email, phone, role, password }, {
+      const { data } = await apiClient.post(`/user/register`, { name, email, phone, role, password }, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

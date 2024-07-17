@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaBriefcase, FaMapMarkerAlt, FaDollarSign, FaRegMoneyBillAlt, FaAlignLeft } from 'react-icons/fa';
 import { API_URL } from '../../config';
+import apiClient from '../../apiclient';
 
 const PostJob = () => {
   const [title, setTitle] = useState("");
@@ -47,7 +48,7 @@ const PostJob = () => {
     }
 
     try {
-      const res = await axios.post(`${API_URL}/job/post`, jobData, {
+      const res = await apiClient.post(`/job/post`, jobData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

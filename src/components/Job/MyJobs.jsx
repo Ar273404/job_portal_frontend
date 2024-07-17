@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import { Context } from "../../main";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../config";
+import apiClient from "../../apiclient";
 
 const MyJobs = () => {
   const [myJobs, setMyJobs] = useState([]);
@@ -17,8 +18,8 @@ const MyJobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const { data } = await axios.get(
-          `${API_URL}/job/getmyjobs`,
+        const { data } = await apiClient.get(
+          `/job/getmyjobs`,
           { withCredentials: true }
         );
         console.log(data.myjobs);
@@ -48,8 +49,8 @@ const MyJobs = () => {
   //Function For Updating The Job
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
-    await axios
-      .put(`${API_URL}/job/updatejobs/${jobId}`, updatedJob, {
+    await apiClient
+      .put(`/job/updatejobs/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -63,8 +64,8 @@ const MyJobs = () => {
 
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
-    await axios
-      .delete(`${API_URL}/job/deletejob/${jobId}`, {
+    await apiClient
+      .delete(`/job/deletejob/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {

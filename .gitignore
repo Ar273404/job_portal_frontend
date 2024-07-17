@@ -1,5 +1,6 @@
 # Logs
 node_modules/
+env
 
 # Log files
 logs

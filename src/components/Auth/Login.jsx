@@ -4,6 +4,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Context } from '../../main';
 import { API_URL } from '../../config';
+import apiClient from '../../apiclient';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,8 +15,8 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        `${API_URL}/user/login`,
+      const { data } = await apiClient.post(
+        `/user/login`,
         { email, password, role },
         {
           headers: {
