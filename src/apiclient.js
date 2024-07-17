@@ -1,9 +1,10 @@
-// src/apiClient.js
+// apiClient.js
 import axios from "axios";
-import { API_URL } from "./config.js"; // Adjust the path as necessary
+import { API_URL } from "./config";
 
 const apiClient = axios.create({
   baseURL: API_URL,
+  withCredentials: true,
   headers: {
     "Content-Type": "application/json",
   },

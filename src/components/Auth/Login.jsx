@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await apiClient.post(
-        `/user/login`,
+        '/user/login',
         { email, password, role },
         {
           headers: {
