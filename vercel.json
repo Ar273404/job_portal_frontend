@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "https://job-portal-backend-sepia.vercel.app/api/$1"
+      "destination": "https://job-portal-backend-sepia.vercel.app/$1"
     }
   ]
 }
